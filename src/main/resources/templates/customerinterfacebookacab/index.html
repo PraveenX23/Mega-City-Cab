@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <!-- basic -->
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <!-- mobile metas -->
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+      <!-- site metas -->
+      <title>Mega City Cab</title>
+      <meta name="keywords" content="">
+      <meta name="description" content="">
+      <meta name="author" content="">
+
+      <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Raleway:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+
+      <style>
+        /* General Reset */
+        * {
+           margin: 0;
+           padding: 0;
+           box-sizing: border-box;
+           font-family: 'Poppins', sans-serif;
+        }
+        body {
+           background: #f4f4f4;
+           color: #333;
+        }
+        /* Header Section */
+        .header_section {
+           background: #111;
+           padding: 15px 0;
+           color: white;
+        }
+        .navbar {
+           display: flex;
+           justify-content: space-between;
+           align-items: center;
+           padding: 0 50px;
+        }
+        .navbar-brand {
+           font-size: 24px;
+           font-weight: bold;
+           color: white;
+           text-decoration: none;
+        }
+        .nav-link {
+           text-decoration: none;
+           color: white;
+           margin: 0 15px;
+           font-weight: bold;
+           transition: 0.3s;
+        }
+        .nav-link:hover {
+           color: #fe5b29;
+        }
+        /* Contact Info */
+        .call_text_main {
+           display: flex;
+           justify-content: center;
+           padding: 10px;
+           background: #fe5b29;
+           color: white;
+           font-size: 14px;
+        }
+        .call_text {
+           margin: 0 15px;
+        }
+        /* About Section */
+        .about_section {
+           display: flex;
+           align-items: center;
+           justify-content: space-between;
+           padding: 60px 80px;
+           background: white;
+        }
+        .about_taital {
+           font-size: 36px;
+           font-weight: bold;
+        }
+        .about_text {
+           font-size: 16px;
+           color: #555;
+           margin-top: 15px;
+           line-height: 1.6;
+        }
+        .readmore_btn a {
+           display: inline-block;
+           padding: 10px 25px;
+           background: #fe5b29;
+           color: white;
+           text-decoration: none;
+           border-radius: 5px;
+           font-weight: bold;
+           margin-top: 20px;
+        }
+        .readmore_btn a:hover {
+           background: #333;
+        }
+        .about_img {
+           max-width: 500px;
+        }
+        /* Footer Section */
+        .footer_section {
+           background: #222;
+           color: white;
+           padding: 40px 0;
+           text-align: center;
+        }
+        .footer_section h4 {
+           color: white;
+           font-size: 18px;
+           margin-bottom: 10px;
+        }
+        .footer_section p {
+           font-size: 14px;
+           color: #ccc;
+        }
+        .social_icon ul {
+           list-style: none;
+           padding: 0;
+           display: flex;
+           justify-content: center;
+           margin-top: 15px;
+        }
+        .social_icon ul li {
+           margin: 0 10px;
+        }
+        .social_icon ul li a {
+           color: white;
+           font-size: 20px;
+           transition: 0.3s;
+        }
+        .social_icon ul li a:hover {
+           color: #fe5b29;
+        }
+        .subscribe_btn {
+           display: inline-block;
+           padding: 10px 20px;
+           background: #fe5b29;
+           color: white;
+           text-decoration: none;
+           border-radius: 5px;
+           font-weight: bold;
+           margin-top: 10px;
+        }
+        .subscribe_btn:hover {
+           background: #333;
+        }
+     </style>
+   </head>
+   <body>
+      <!-- header section start -->
+      <div class="header_section">
+        <div class="navbar">
+           <a class="navbar-brand" href="index.html">Mega City Cab</a>
+           <div>
+             <a href="/customerinterfacebookacab/index" class="nav-link">Home</a>
+             <a href="/customerinterfacebookacab/about" class="nav-link">About</a>
+             <a href="/customerinterfacebookacab/contact" class="nav-link">Contact</a>
+             <a href="/customerfeedback/customeraddfeedback" class="nav-link">Feedback</a>
+             <a href="/customerinterfacebookacab/customerbookcab" class="nav-link">Book a cab</a>
+             <a class="nav-link" href="/customerinterfacebookacab/vehicles">Vehicles</a>
+           </div>
+        </div>
+     </div>
+     
+      <!-- header section end -->
+      <div class="call_text_main" style="background-color: #fe5b29; padding: 10px 0;">
+        <div class="container" style="max-width: 1200px; margin: auto;">
+           <div class="call_taital" style="display: flex; justify-content: space-around; align-items: center; color: #fff; text-align: center;">
+              <div class="call_text">
+                 <a href="#" style="text-decoration: none; color: #fff; font-size: 16px; display: flex; align-items: center;">
+                    <i class="fa fa-map-marker" aria-hidden="true" style="margin-right: 10px;"></i>
+                    <span>Location</span>
+                 </a>
+              </div>
+              <div class="call_text">
+                 <a href="#" style="text-decoration: none; color: #fff; font-size: 16px; display: flex; align-items: center;">
+                    <i class="fa fa-phone" aria-hidden="true" style="margin-right: 10px;"></i>
+                    <span>(+71) 8522369417</span>
+                 </a>
+              </div>
+              <div class="call_text">
+                 <a href="#" style="text-decoration: none; color: #fff; font-size: 16px; display: flex; align-items: center;">
+                    <i class="fa fa-envelope" aria-hidden="true" style="margin-right: 10px;"></i>
+                    <span>megacitycab@gmail.com</span>
+                 </a>
+              </div>
+           </div>
+        </div>
+     </div>
+     
+      <!-- banner section start --> 
+      <div class="banner_section layout_padding" style="background-color: #f5f5f5; padding: 50px 0;">
+        <div class="container" style="max-width: 1200px; margin: auto;">
+           <div class="row" style="display: flex; align-items: center;">
+              <div class="col-md-6" style="width: 50%;">
+                 <div id="banner_slider" class="carousel slide" data-ride="carousel" style="width: 100%;">
+                    <div class="carousel-inner">
+                       <div class="carousel-item" style="text-align: left;">
+                          <div class="banner_taital_main" style="padding: 20px;">
+                             <h1 class="banner_taital" style="font-size: 40px; font-weight: bold; line-height: 1.2;">Car Rent <br>
+                                <span style="color: #fe5b29;">For You</span>
+                             </h1>
+                             <p class="banner_text" style="font-size: 16px; color: #666;">There are many variations of passages of Lorem Ipsum available, but the majority</p>
+                             <div class="btn_main" style="margin-top: 20px;">
+                                <a href="#" style="background: #333; color: #fff; padding: 10px 20px; text-decoration: none; border-radius: 5px; display: inline-block;">Read More</a>
+                                <a href="#" style="background: #fe5b29; color: #fff; padding: 10px 20px; text-decoration: none; border-radius: 5px; margin-left: 10px; display: inline-block;">Contact Us</a>
+                             </div>
+                          </div>
+                       </div>
+                    </div>
+                    <a class="carousel-control-prev" href="#banner_slider" role="button" data-slide="prev" style="position: absolute; left: 0; top: 50%; transform: translateY(-50%); font-size: 24px; color: #333; text-decoration: none;">
+                    <i class="fa fa-angle-left"></i>
+                    </a>
+                    <a class="carousel-control-next" href="#banner_slider" role="button" data-slide="next" style="position: absolute; right: 0; top: 50%; transform: translateY(-50%); font-size: 24px; color: #333; text-decoration: none;">
+                    <i class="fa fa-angle-right"></i>
+                    </a>
+                 </div>
+              </div>
+              <div class="col-md-6" style="width: 50%; text-align: center;">
+                 <div class="banner_img">
+                    <img src="/images/banner-img.png" style="width: 100%; height: auto;">
+                 </div>
+              </div>
+           </div>
+        </div>
+     </div>
+     
+      <!-- banner section end -->
+      <!-- about section start -->
+      <div class="about_section layout_padding" style="padding: 50px 0; background-color: #fff;">
+        <div class="container" style="max-width: 1200px; margin: auto;">
+           <div class="about_section_2" style="display: flex; align-items: center;">
+              <div class="row" style="display: flex; flex-wrap: wrap; width: 100%;">
+                 <div class="col-md-6" style="width: 50%; padding: 10px;">
+                    <div class="image_iman" style="text-align: center;">
+                       <img src="/images/about-img.png" class="about_img" style="width: 100%; height: auto; max-width: 500px;">
+                    </div>
+                 </div>
+                 <div class="col-md-6" style="width: 50%; padding: 10px;">
+                    <div class="about_taital_box" style="text-align: left;">
+                       <h1 class="about_taital" style="font-size: 30px; font-weight: bold; color: #333;">About 
+                          <span style="color: #fe5b29;">Us</span>
+                       </h1>
+                       <p class="about_text" style="font-size: 16px; color: #666; line-height: 1.6;">
+                          Going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. 
+                          All the Lorem Ipsum generators on the Internet tend to repeat predefined text.
+                       </p>
+                       <div class="readmore_btn" style="margin-top: 20px;">
+                          <a href="#" style="background: #fe5b29; color: #fff; padding: 10px 20px; text-decoration: none; border-radius: 5px; display: inline-block;">Read More</a>
+                       </div>
+                    </div>
+                 </div>
+              </div>
+           </div>
+        </div>
+     </div>
+     
+      <!-- about section end -->
+
+     
+      <!-- gallery section start -->
+      <div class="gallery_section layout_padding" style="padding: 50px 0; background-color: #f5f5f5;">
+        <div class="container" style="max-width: 1200px; margin: auto; text-align: center;">
+           <div class="row" style="display: flex; justify-content: center;">
+              <div class="col-md-12" style="width: 100%;">
+                 <h1 class="gallery_taital" style="font-size: 30px; font-weight: bold; color: #333; margin-bottom: 20px;">Our Best Offers</h1>
+              </div>
+           </div>
+           <div class="gallery_section_2">
+              <div class="row" style="display: flex; flex-wrap: wrap; justify-content: space-between;">
+                 <div class="col-md-4" style="width: 32%; padding: 10px;">
+                    <div class="gallery_box" style="background: #fff; padding: 15px; border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.1); text-align: center;">
+                       <div class="gallery_img">
+                          <img src="/images/img-1.png" style="width: 100%; height: auto; border-radius: 10px;">
+                       </div>
+                       <h3 class="types_text" style="font-size: 20px; color: #333; margin: 10px 0;">Toyota Car</h3>
+                       <p class="looking_text" style="font-size: 16px; color: #666;">Start per day $4500</p>
+                       <div class="read_bt" style="margin-top: 10px;">
+                          <a href="#" style="background: #fe5b29; color: #fff; padding: 10px 20px; text-decoration: none; border-radius: 5px; display: inline-block;">Book Now</a>
+                       </div>
+                    </div>
+                 </div>
+                 <div class="col-md-4" style="width: 32%; padding: 10px;">
+                    <div class="gallery_box" style="background: #fff; padding: 15px; border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.1); text-align: center;">
+                       <div class="gallery_img">
+                          <img src="/images/img-2.png" style="width: 100%; height: auto; border-radius: 10px;">
+                       </div>
+                       <h3 class="types_text" style="font-size: 20px; color: #333; margin: 10px 0;">Toyota Car</h3>
+                       <p class="looking_text" style="font-size: 16px; color: #666;">Start per day $4500</p>
+                       <div class="read_bt" style="margin-top: 10px;">
+                          <a href="#" style="background: #fe5b29; color: #fff; padding: 10px 20px; text-decoration: none; border-radius: 5px; display: inline-block;">Book Now</a>
+                       </div>
+                    </div>
+                 </div>
+                 <div class="col-md-4" style="width: 32%; padding: 10px;">
+                    <div class="gallery_box" style="background: #fff; padding: 15px; border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.1); text-align: center;">
+                       <div class="gallery_img">
+                          <img src="/images/img-3.png" style="width: 100%; height: auto; border-radius: 10px;">
+                       </div>
+                       <h3 class="types_text" style="font-size: 20px; color: #333; margin: 10px 0;">Toyota Car</h3>
+                       <p class="looking_text" style="font-size: 16px; color: #666;">Start per day $4500</p>
+                       <div class="read_bt" style="margin-top: 10px;">
+                          <a href="#" style="background: #fe5b29; color: #fff; padding: 10px 20px; text-decoration: none; border-radius: 5px; display: inline-block;">Book Now</a>
+                       </div>
+                    </div>
+                 </div>
+              </div>
+           </div>
+        </div>
+     </div>
+     
+      <!-- gallery section end -->
+      <!-- choose section start -->
+      <div class="choose_section layout_padding" style="padding: 50px 0; background-color: #4c4949; text-align: center;">
+        <div class="container" style="max-width: 1200px; margin: auto;">
+           <div class="row" style="display: flex; justify-content: center;">
+              <div class="col-md-12" style="width: 100%;">
+                 <h1 class="choose_taital" style="font-size: 30px; font-weight: bold; color: #333; margin-bottom: 30px;">WHY CHOOSE US</h1>
+              </div>
+           </div>
+           <div class="choose_section_2">
+              <div class="row" style="display: flex; justify-content: space-between; text-align: center;">
+                 <div class="col-sm-4" style="width: 32%; padding: 20px;">
+                    <div class="icon_1">
+                       <img src="/images/icon-1.png" style="width: 80px; height: auto; margin-bottom: 10px;">
+                    </div>
+                    <h4 class="safety_text" style="font-size: 20px; color: #333; margin-bottom: 10px;">SAFETY & SECURITY</h4>
+                    <p class="ipsum_text" style="font-size: 16px; color: #666; line-height: 1.6;">Variations of passages of Lorem Ipsum available, but the majority have.</p>
+                 </div>
+                 <div class="col-sm-4" style="width: 32%; padding: 20px;">
+                    <div class="icon_1">
+                       <img src="/images/icon-2.png" style="width: 80px; height: auto; margin-bottom: 10px;">
+                    </div>
+                    <h4 class="safety_text" style="font-size: 20px; color: #333; margin-bottom: 10px;">Online Booking</h4>
+                    <p class="ipsum_text" style="font-size: 16px; color: #666; line-height: 1.6;">Variations of passages of Lorem Ipsum available, but the majority have.</p>
+                 </div>
+                 <div class="col-sm-4" style="width: 32%; padding: 20px;">
+                    <div class="icon_1">
+                       <img src="/images/icon-3.png" style="width: 80px; height: auto; margin-bottom: 10px;">
+                    </div>
+                    <h4 class="safety_text" style="font-size: 20px; color: #333; margin-bottom: 10px;">Best Drivers</h4>
+                    <p class="ipsum_text" style="font-size: 16px; color: #666; line-height: 1.6;">Variations of passages of Lorem Ipsum available, but the majority have.</p>
+                 </div>
+              </div>
+           </div>
+        </div>
+     </div>
+     
+      <!-- choose section end -->
+      <!-- client section start -->
+      <div class="client_section layout_padding" style="padding: 50px 0; background-color: #f5f5f5; text-align: center;">
+        <div class="container" style="max-width: 1200px; margin: auto;">
+           <div id="custom_slider" class="carousel slide" data-ride="carousel" style="position: relative;">
+              <div class="carousel-inner">
+                 <div class="carousel-item active" style="padding: 20px;">
+                    <div class="row" style="display: flex; justify-content: center;">
+                       <div class="col-md-12" style="width: 100%;">
+                          <h1 class="client_taital" style="font-size: 30px; font-weight: bold; color: #333; margin-bottom: 30px;">What Says Customers</h1>
+                       </div>
+                    </div>
+                    <div class="client_section_2">
+                       <div class="row" style="display: flex; justify-content: space-between;">
+                          <div class="col-md-6" style="width: 48%; padding: 20px; background: #fff; border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.1);">
+                             <div class="client_taital_box" style="text-align: center;">
+                                <div class="client_img">
+                                   <img src="/images/client-img1.png" style="width: 80px; height: auto; border-radius: 50%; margin-bottom: 10px;">
+                                </div>
+                                <h3 class="moark_text" style="font-size: 20px; color: #333; margin-bottom: 10px;">Hannery</h3>
+                                <p class="client_text" style="font-size: 16px; color: #666; line-height: 1.6;">It is a long established fact that a reader will be distracted by the readable content of a page.</p>
+                             </div>
+                             <div class="quick_icon">
+                                <img src="/images/quick-icon.png" style="width: 30px; height: auto; margin-top: 10px;">
+                             </div>
+                          </div>
+                          <div class="col-md-6" style="width: 48%; padding: 20px; background: #fff; border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.1);">
+                             <div class="client_taital_box" style="text-align: center;">
+                                <div class="client_img">
+                                   <img src="/images/client-img2.png" style="width: 80px; height: auto; border-radius: 50%; margin-bottom: 10px;">
+                                </div>
+                                <h3 class="moark_text" style="font-size: 20px; color: #333; margin-bottom: 10px;">Channery</h3>
+                                <p class="client_text" style="font-size: 16px; color: #666; line-height: 1.6;">It is a long established fact that a reader will be distracted by the readable content of a page.</p>
+                             </div>
+                             <div class="quick_icon">
+                                <img src="/images/quick-icon.png" style="width: 30px; height: auto; margin-top: 10px;">
+                             </div>
+                          </div>
+                       </div>
+                    </div>
+                 </div>
+              </div>
+              <a class="carousel-control-prev" href="#custom_slider" role="button" data-slide="prev" style="position: absolute; left: 0; top: 50%; transform: translateY(-50%); font-size: 24px; color: #333; text-decoration: none;">
+              <i class="fa fa-angle-left"></i>
+              </a>
+              <a class="carousel-control-next" href="#custom_slider" role="button" data-slide="next" style="position: absolute; right: 0; top: 50%; transform: translateY(-50%); font-size: 24px; color: #333; text-decoration: none;">
+              <i class="fa fa-angle-right"></i>
+              </a>
+           </div>
+        </div>
+     </div>
+     
+      <!-- client section end -->
+      <!-- contact section start -->
+      <div class="contact_section layout_padding" style="padding: 50px 0; background-color: #f5f5f5; text-align: center;">
+        <div class="container" style="max-width: 1200px; margin: auto;">
+           <div class="row" style="display: flex; justify-content: center;">
+              <div class="col-sm-12" style="width: 100%;">
+                 <h1 class="contact_taital" style="font-size: 30px; font-weight: bold; color: #333; margin-bottom: 30px;">Get In Touch</h1>
+              </div>
+           </div>
+        </div>
+        <div class="container" style="max-width: 800px; margin: auto;">
+           <div class="contact_section_2" style="background: #fff; padding: 30px; border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.1);">
+              <div class="row" style="display: flex; justify-content: center;">
+                 <div class="col-md-12" style="width: 100%;">
+                    <div class="mail_section_1" style="display: flex; flex-direction: column; gap: 15px;">
+                       <input type="text" class="mail_text" placeholder="Name" name="Name" 
+                          style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px; font-size: 16px;">
+                       <input type="text" class="mail_text" placeholder="Email" name="Email" 
+                          style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px; font-size: 16px;">
+                       <input type="text" class="mail_text" placeholder="Phone Number" name="Phone Number" 
+                          style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px; font-size: 16px;">
+                       <textarea class="massage-bt" placeholder="Message" rows="5" id="comment" name="Massage" 
+                          style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px; font-size: 16px;"></textarea>
+                       <div class="send_bt" style="margin-top: 15px;">
+                          <a href="#" style="background: #fe5b29; color: #fff; padding: 12px 25px; text-decoration: none; border-radius: 5px; display: inline-block; font-size: 18px; font-weight: bold;">Send</a>
+                       </div>
+                    </div>
+                 </div>
+              </div>
+           </div>
+        </div>
+     </div>
+     
+      <!-- contact section end -->
+      <!-- footer section start -->
+      <div class="footer_section layout_padding" style="padding: 50px 0; background-color: #222; color: #fff; text-align: center;">
+        <div class="container" style="max-width: 1200px; margin: auto;">
+           <div class="row" style="display: flex; justify-content: center;">
+              <div class="col-md-12" style="width: 100%;">
+                  
+              </div>
+           </div>
+           <div class="footer_section_2" style="margin-top: 30px;">
+              <div class="row" style="display: flex; justify-content: space-between; text-align: left;">
+                 <div class="col" style="width: 20%; padding: 10px;">
+                    <h4 class="footer_taital" style="font-size: 18px; font-weight: bold; color: #fff; margin-bottom: 10px;">Subscribe Now</h4>
+                    <p class="footer_text" style="font-size: 14px; color: #ccc;">There are many variations of passages of Lorem Ipsum available.</p>
+                    <div class="form-group" style="margin-top: 10px;">
+                       <textarea class="update_mail" placeholder="Enter Your Email" rows="2" id="comment" name="Enter Your Email" 
+                          style="width: 100%; padding: 8px; border: none; border-radius: 5px; font-size: 14px;"></textarea>
+                       <div class="subscribe_bt" style="margin-top: 10px;">
+                          <a href="#" style="background: #fe5b29; color: #fff; padding: 8px 15px; text-decoration: none; border-radius: 5px; display: inline-block; font-size: 14px;">Subscribe</a>
+                       </div>
+                    </div>
+                 </div>
+                 <div class="col" style="width: 20%; padding: 10px;">
+                    <h4 class="footer_taital" style="font-size: 18px; font-weight: bold; color: #fff; margin-bottom: 10px;">Information</h4>
+                    <p class="lorem_text" style="font-size: 14px; color: #ccc;">There are many variations of passages of Lorem Ipsum available, but the majority.</p>
+                 </div>
+                 <div class="col" style="width: 20%; padding: 10px;">
+                    <h4 class="footer_taital" style="font-size: 18px; font-weight: bold; color: #fff; margin-bottom: 10px;">Helpful Links</h4>
+                    <p class="lorem_text" style="font-size: 14px; color: #ccc;">There are many variations of passages of Lorem Ipsum available, but the majority.</p>
+                 </div>
+                 <div class="col" style="width: 20%; padding: 10px;">
+                    <h4 class="footer_taital" style="font-size: 18px; font-weight: bold; color: #fff; margin-bottom: 10px;">Investments</h4>
+                    <p class="lorem_text" style="font-size: 14px; color: #ccc;">There are many variations of passages of Lorem Ipsum available, but the majority.</p>
+                 </div>
+                 <div class="col" style="width: 20%; padding: 10px;">
+                    <h4 class="footer_taital" style="font-size: 18px; font-weight: bold; color: #fff; margin-bottom: 10px;">Contact Us</h4>
+                    <div class="location_text" style="margin-bottom: 8px;">
+                       <a href="#" style="text-decoration: none; color: #ccc; font-size: 14px;">
+                       <i class="fa fa-map-marker" aria-hidden="true"></i> <span style="padding-left: 10px;">Location</span>
+                       </a>
+                    </div>
+                    <div class="location_text" style="margin-bottom: 8px;">
+                       <a href="#" style="text-decoration: none; color: #ccc; font-size: 14px;">
+                       <i class="fa fa-phone" aria-hidden="true"></i> <span style="padding-left: 10px;">(+71) 8522369417</span>
+                       </a>
+                    </div>
+                    <div class="location_text" style="margin-bottom: 10px;">
+                       <a href="#" style="text-decoration: none; color: #ccc; font-size: 14px;">
+                       <i class="fa fa-envelope" aria-hidden="true"></i> <span style="padding-left: 10px;">megacitycab@gmail.com</span>
+                       </a>
+                    </div>
+                    <div class="social_icon" style="margin-top: 10px;">
+                       <ul style="list-style: none; display: flex; gap: 10px; padding: 0; margin: 0;">
+                          <li><a href="#" style="color: #ccc; font-size: 16px;"><i class="fa fa-facebook"></i></a></li>
+                          <li><a href="#" style="color: #ccc; font-size: 16px;"><i class="fa fa-twitter"></i></a></li>
+                          <li><a href="#" style="color: #ccc; font-size: 16px;"><i class="fa fa-linkedin"></i></a></li>
+                          <li><a href="#" style="color: #ccc; font-size: 16px;"><i class="fa fa-instagram"></i></a></li>
+                       </ul>
+                    </div>
+                 </div>
+              </div>
+           </div>
+        </div>
+     </div>
+     
+      <!-- footer section end -->
+      <!-- copyright section start -->
+      <div class="copyright_section" style="background-color: #111; padding: 15px 0; text-align: center; color: #fff;">
+        <div class="container" style="max-width: 1200px; margin: auto;">
+           <div class="row" style="display: flex; justify-content: center;">
+              <div class="col-sm-12" style="width: 100%;">
+                 <p class="copyright_text" style="font-size: 14px; color: #ccc; margin: 0;">
+                    2023 All Rights Reserved. Design by 
+                    <a href="https://html.design" style="color: #fe5b29; text-decoration: none;"> Mega City Cab</a> 
+                 </p>
+              </div>
+           </div>
+        </div>
+     </div>
+     
+      <!-- copyright section end -->
+      <!-- Javascript files-->
+      <script src="/js/jquery.min.js"></script>
+      <script src="/js/popper.min.js"></script>
+      <script src="/js/bootstrap.bundle.min.js"></script>
+      <script src="/js/jquery-3.0.0.min.js"></script>
+      <script src="/js/plugin.js"></script>
+      <!-- sidebar -->
+      <script src="/js/jquery.mCustomScrollbar.concat.min.js"></script>
+      <script src="/js/custom.js"></script>
+   </body>
+</html>

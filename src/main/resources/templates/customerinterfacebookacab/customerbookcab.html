@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Cab</title>
+    
+    <!-- Bootstrap CSS -->
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Roboto&family=Pacifico&display=swap" rel="stylesheet">
+    
+
+
+          <style>
+            /* General Reset */
+            * {
+               margin: 0;
+               padding: 0;
+               box-sizing: border-box;
+               font-family: 'Poppins', sans-serif;
+            }
+            body {
+               background: #f4f4f4;
+               color: #333;
+            }
+            /* Header Section */
+            .header_section {
+               background: #111;
+               padding: 15px 0;
+               color: white;
+            }
+            .navbar {
+               display: flex;
+               justify-content: space-between;
+               align-items: center;
+               padding: 0 50px;
+            }
+            .navbar-brand {
+               font-size: 24px;
+               font-weight: bold;
+               color: white;
+               text-decoration: none;
+            }
+            .nav-link {
+               text-decoration: none;
+               color: white;
+               margin: 0 15px;
+               font-weight: bold;
+               transition: 0.3s;
+            }
+            .nav-link:hover {
+               color: #fe5b29;
+            }
+            /* Contact Info */
+            .call_text_main {
+               display: flex;
+               justify-content: center;
+               padding: 10px;
+               background: #fe5b29;
+               color: white;
+               font-size: 14px;
+            }
+            .call_text {
+               margin: 0 15px;
+            }
+            /* About Section */
+            .about_section {
+               display: flex;
+               align-items: center;
+               justify-content: space-between;
+               padding: 60px 80px;
+               background: white;
+            }
+            .about_taital {
+               font-size: 36px;
+               font-weight: bold;
+            }
+            .about_text {
+               font-size: 16px;
+               color: #555;
+               margin-top: 15px;
+               line-height: 1.6;
+            }
+            .readmore_btn a {
+               display: inline-block;
+               padding: 10px 25px;
+               background: #fe5b29;
+               color: white;
+               text-decoration: none;
+               border-radius: 5px;
+               font-weight: bold;
+               margin-top: 20px;
+            }
+            .readmore_btn a:hover {
+               background: #333;
+            }
+            .about_img {
+               max-width: 500px;
+            }
+            /* Footer Section */
+            .footer_section {
+               background: #222;
+               color: white;
+               padding: 40px 0;
+               text-align: center;
+            }
+            .footer_section h4 {
+               color: white;
+               font-size: 18px;
+               margin-bottom: 10px;
+            }
+            .footer_section p {
+               font-size: 14px;
+               color: #ccc;
+            }
+            .social_icon ul {
+               list-style: none;
+               padding: 0;
+               display: flex;
+               justify-content: center;
+               margin-top: 15px;
+            }
+            .social_icon ul li {
+               margin: 0 10px;
+            }
+            .social_icon ul li a {
+               color: white;
+               font-size: 20px;
+               transition: 0.3s;
+            }
+            .social_icon ul li a:hover {
+               color: #fe5b29;
+            }
+            .subscribe_btn {
+               display: inline-block;
+               padding: 10px 20px;
+               background: #fe5b29;
+               color: white;
+               text-decoration: none;
+               border-radius: 5px;
+               font-weight: bold;
+               margin-top: 10px;
+            }
+            .subscribe_btn:hover {
+               background: #333;
+            }
+         </style>
+
+</head>
+<body>
+
+      <!-- header section start -->
+      <div class="header_section">
+        <div class="navbar">
+           <a class="navbar-brand" href="index.html">Mega City Cab</a>
+           <div>
+             <a href="/customerinterfacebookacab/index" class="nav-link">Home</a>
+             <a href="/customerinterfacebookacab/about" class="nav-link">About</a>
+             <a href="/customerinterfacebookacab/contact" class="nav-link">Contact</a>
+             <a href="/customerfeedback/customeraddfeedback" class="nav-link">Feedback</a>
+             <a href="/customerinterfacebookacab/customerbookcab" class="nav-link">Book a cab</a>
+             <a class="nav-link" href="/customerinterfacebookacab/vehicles">Vehicles</a>
+           </div>
+        </div>
+     </div>
+     
+
+           <!-- header section end -->
+           <div class="call_text_main" style="background-color: #fe5b29; padding: 10px 0;">
+            <div class="container" style="max-width: 1200px; margin: auto;">
+               <div class="call_taital" style="display: flex; justify-content: space-around; align-items: center; color: #fff; text-align: center;">
+                  <div class="call_text">
+                     <a href="#" style="text-decoration: none; color: #fff; font-size: 16px; display: flex; align-items: center;">
+                        <i class="fa fa-map-marker" aria-hidden="true" style="margin-right: 10px;"></i>
+                        <span>Location</span>
+                     </a>
+                  </div>
+                  <div class="call_text">
+                     <a href="#" style="text-decoration: none; color: #fff; font-size: 16px; display: flex; align-items: center;">
+                        <i class="fa fa-phone" aria-hidden="true" style="margin-right: 10px;"></i>
+                        <span>(+71) 8522369417</span>
+                     </a>
+                  </div>
+                  <div class="call_text">
+                     <a href="#" style="text-decoration: none; color: #fff; font-size: 16px; display: flex; align-items: center;">
+                        <i class="fa fa-envelope" aria-hidden="true" style="margin-right: 10px;"></i>
+                        <span>megacitycab@gmail.com</span>
+                     </a>
+                  </div>
+               </div>
+            </div>
+         </div>
+
+
+
+         <div style="background-color: #f8f9fa; min-height: 100vh; display: flex; align-items: center; justify-content: center;">
+            <div style="width: 90%; max-width: 800px; background-color: #ffffff; border-radius: 8px; border: 1px solid #dee2e6; padding: 20px; box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);">
+                <h2 style="text-align: center; margin-bottom: 20px; color: #333;">Book Cab</h2>
+                <form method="post" enctype="multipart/form-data" th:object="${customerbookcabDto}">
+                    <div style="margin-bottom: 15px; display: flex; align-items: center;">
+                        <label style="width: 30%; font-weight: bold;">Name</label>
+                        <div style="width: 70%;">
+                            <input id="foodNameInput" style="width: 100%; padding: 8px; border: 1px solid #ccc; border-radius: 5px;" th:field="${customerbookcabDto.name}" placeholder="Name">
+                            <p th:if="${#fields.hasErrors('name')}" style="color: red;" th:errors="${customerbookcabDto.name}"></p>
+                        </div>
+                    </div>
+        
+                    <div style="margin-bottom: 15px; display: flex; align-items: center;">
+                        <label style="width: 30%; font-weight: bold;">Vehicle type</label>
+                        <div style="width: 70%;">
+                            <input id="foodtypeInput" style="width: 100%; padding: 8px; border: 1px solid #ccc; border-radius: 5px;" th:field="${customerbookcabDto.type}" placeholder="Vehicle type">
+                            <p th:if="${#fields.hasErrors('type')}" style="color: red;" th:errors="${customerbookcabDto.type}"></p>
+                        </div>
+                    </div>
+        
+                    <div style="margin-bottom: 15px; display: flex; align-items: center;">
+                        <label style="width: 30%; font-weight: bold;">Place</label>
+                        <div style="width: 70%;">
+                            <input style="width: 100%; padding: 8px; border: 1px solid #ccc; border-radius: 5px;" th:field="${customerbookcabDto.place}" placeholder="Location">
+                            <p th:if="${#fields.hasErrors('place')}" style="color: red;" th:errors="${customerbookcabDto.place}"></p>
+                        </div>
+                    </div>
+        
+                    <div style="margin-bottom: 15px; display: flex; align-items: center;">
+                        <label style="width: 30%; font-weight: bold;">Contact Number</label>
+                        <div style="width: 70%;">
+                            <input style="width: 100%; padding: 8px; border: 1px solid #ccc; border-radius: 5px;" th:field="${customerbookcabDto.phone}" placeholder="Your contact Number">
+                            <p th:if="${#fields.hasErrors('phone')}" style="color: red;" th:errors="${customerbookcabDto.phone}"></p>
+                        </div>
+                    </div>
+        
+                    <div style="margin-bottom: 15px; display: flex; align-items: center;">
+                        <label style="width: 30%; font-weight: bold;">Time</label>
+                        <div style="width: 70%;">
+                            <input type="time" style="width: 100%; padding: 8px; border: 1px solid #ccc; border-radius: 5px;" th:field="${customerbookcabDto.time}" id="book_time">
+                            <p th:if="${#fields.hasErrors('time')}" style="color: red;" th:errors="${customerbookcabDto.time}"></p>
+                        </div>
+                    </div>
+        
+                    <div style="margin-bottom: 15px; display: flex; align-items: center;">
+                        <label style="width: 30%; font-weight: bold;">Description</label>
+                        <div style="width: 70%;">
+                            <input style="width: 100%; padding: 8px; border: 1px solid #ccc; border-radius: 5px;" th:field="${customerbookcabDto.description}" placeholder="Additional Note">
+                            <p th:if="${#fields.hasErrors('description')}" style="color: red;" th:errors="${customerbookcabDto.description}"></p>
+                        </div>
+                    </div>
+        
+                    <div style="margin-bottom: 15px; display: flex; align-items: center;">
+                        <label style="width: 30%; font-weight: bold;">Status</label>
+                        <div style="width: 70%;">
+                            <select style="width: 100%; padding: 8px; border: 1px solid #ccc; border-radius: 5px;">
+                                <!-- Options for status can be added here -->
+                            </select>
+                        </div>
+                    </div>
+        
+                    <div style="display: flex; justify-content: space-between;">
+                        <button type="submit" style="width: 48%; padding: 10px; background-color: #007bff; color: white; border: none; border-radius: 5px; cursor: pointer;">Book the cab</button>
+                        <a href="/customerinterfacebookacab/index" role="button" style="width: 48%; padding: 10px; background-color: white; color: #007bff; border: 1px solid #007bff; text-align: center; text-decoration: none; border-radius: 5px;">Cancel</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+        
+    <!-- Optional Bootstrap JS (if needed) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+      <!-- footer section start -->
+      <div class="footer_section layout_padding" style="padding: 50px 0; background-color: #222; color: #fff; text-align: center;">
+        <div class="container" style="max-width: 1200px; margin: auto;">
+           <div class="row" style="display: flex; justify-content: center;">
+              <div class="col-md-12" style="width: 100%;">
+                  
+              </div>
+           </div>
+           <div class="footer_section_2" style="margin-top: 30px;">
+              <div class="row" style="display: flex; justify-content: space-between; text-align: left;">
+                 <div class="col" style="width: 20%; padding: 10px;">
+                    <h4 class="footer_taital" style="font-size: 18px; font-weight: bold; color: #fff; margin-bottom: 10px;">Subscribe Now</h4>
+                    <p class="footer_text" style="font-size: 14px; color: #ccc;">There are many variations of passages of Lorem Ipsum available.</p>
+                    <div class="form-group" style="margin-top: 10px;">
+                       <textarea class="update_mail" placeholder="Enter Your Email" rows="2" id="comment" name="Enter Your Email" 
+                          style="width: 100%; padding: 8px; border: none; border-radius: 5px; font-size: 14px;"></textarea>
+                       <div class="subscribe_bt" style="margin-top: 10px;">
+                          <a href="#" style="background: #fe5b29; color: #fff; padding: 8px 15px; text-decoration: none; border-radius: 5px; display: inline-block; font-size: 14px;">Subscribe</a>
+                       </div>
+                    </div>
+                 </div>
+                 <div class="col" style="width: 20%; padding: 10px;">
+                    <h4 class="footer_taital" style="font-size: 18px; font-weight: bold; color: #fff; margin-bottom: 10px;">Information</h4>
+                    <p class="lorem_text" style="font-size: 14px; color: #ccc;">There are many variations of passages of Lorem Ipsum available, but the majority.</p>
+                 </div>
+                 <div class="col" style="width: 20%; padding: 10px;">
+                    <h4 class="footer_taital" style="font-size: 18px; font-weight: bold; color: #fff; margin-bottom: 10px;">Helpful Links</h4>
+                    <p class="lorem_text" style="font-size: 14px; color: #ccc;">There are many variations of passages of Lorem Ipsum available, but the majority.</p>
+                 </div>
+                 <div class="col" style="width: 20%; padding: 10px;">
+                    <h4 class="footer_taital" style="font-size: 18px; font-weight: bold; color: #fff; margin-bottom: 10px;">Investments</h4>
+                    <p class="lorem_text" style="font-size: 14px; color: #ccc;">There are many variations of passages of Lorem Ipsum available, but the majority.</p>
+                 </div>
+                 <div class="col" style="width: 20%; padding: 10px;">
+                    <h4 class="footer_taital" style="font-size: 18px; font-weight: bold; color: #fff; margin-bottom: 10px;">Contact Us</h4>
+                    <div class="location_text" style="margin-bottom: 8px;">
+                       <a href="#" style="text-decoration: none; color: #ccc; font-size: 14px;">
+                       <i class="fa fa-map-marker" aria-hidden="true"></i> <span style="padding-left: 10px;">Location</span>
+                       </a>
+                    </div>
+                    <div class="location_text" style="margin-bottom: 8px;">
+                       <a href="#" style="text-decoration: none; color: #ccc; font-size: 14px;">
+                       <i class="fa fa-phone" aria-hidden="true"></i> <span style="padding-left: 10px;">(+71) 8522369417</span>
+                       </a>
+                    </div>
+                    <div class="location_text" style="margin-bottom: 10px;">
+                       <a href="#" style="text-decoration: none; color: #ccc; font-size: 14px;">
+                       <i class="fa fa-envelope" aria-hidden="true"></i> <span style="padding-left: 10px;">megacitycab@gmail.com</span>
+                       </a>
+                    </div>
+                    <div class="social_icon" style="margin-top: 10px;">
+                       <ul style="list-style: none; display: flex; gap: 10px; padding: 0; margin: 0;">
+                          <li><a href="#" style="color: #ccc; font-size: 16px;"><i class="fa fa-facebook"></i></a></li>
+                          <li><a href="#" style="color: #ccc; font-size: 16px;"><i class="fa fa-twitter"></i></a></li>
+                          <li><a href="#" style="color: #ccc; font-size: 16px;"><i class="fa fa-linkedin"></i></a></li>
+                          <li><a href="#" style="color: #ccc; font-size: 16px;"><i class="fa fa-instagram"></i></a></li>
+                       </ul>
+                    </div>
+                 </div>
+              </div>
+           </div>
+        </div>
+     </div>
+     
+      <!-- footer section end -->
+      <!-- copyright section start -->
+      <div class="copyright_section" style="background-color: #111; padding: 15px 0; text-align: center; color: #fff;">
+        <div class="container" style="max-width: 1200px; margin: auto;">
+           <div class="row" style="display: flex; justify-content: center;">
+              <div class="col-sm-12" style="width: 100%;">
+                 <p class="copyright_text" style="font-size: 14px; color: #ccc; margin: 0;">
+                    2023 All Rights Reserved. Design by 
+                    <a href="https://html.design" style="color: #fe5b29; text-decoration: none;"> Mega City Cab</a> 
+
+                 </p>
+              </div>
+           </div>
+        </div>
+     </div>
+</body>
+</html>

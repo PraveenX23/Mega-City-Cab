@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Feedback</title>
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Great+Vibes&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="/css/animate.css">
+    
+    <link rel="stylesheet" href="/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="/css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="/css/magnific-popup.css">
+
+    <link rel="stylesheet" href="/css/aos.css">
+
+    <link rel="stylesheet" href="/css/ionicons.min.css">
+
+    <link rel="stylesheet" href="/css/bootstrap-datepicker.css">
+    <link rel="stylesheet" href="/css/jquery.timepicker.css">
+
+    
+    <link rel="stylesheet" href="/css/flaticon.css">
+    <link rel="stylesheet" href="/css/icomoon.css">
+    <link rel="stylesheet" href="/css/style.css">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <style>
+
+        .containerr {
+            background-color: aliceblue;
+        }
+        
+
+      .star-rating {
+          direction: rtl;
+          display: inline-block;
+          font-size: 1.5rem;
+          unicode-bidi: bidi-override;
+          cursor: pointer;
+      }
+      .star-rating input {
+          display: none;
+      }
+      .star-rating label {
+          color: #ccc;
+          display: inline-block;
+          font-size: 2rem;
+      }
+      .star-rating input:checked ~ label,
+      .star-rating input:hover ~ label,
+      .star-rating input:hover ~ input ~ label {
+          color: gold;
+      }
+      .star-rating input:checked + label,
+      .star-rating input:checked + label ~ label {
+          color: gold;
+      }
+  </style>
+</head>
+<body>
+    <div class="containerr">
+       
+        <div class="row">
+    
+            <div class="col-md-8 mx-auto rounded border p-4 m-4">
+                <h2 class="text-center mb-5">Add Feedback</h2>
+    
+                <form method="post" enctype="multipart/form-data"th:object="${customerAddFeedbackDto}">
+    
+                  <div class="row mb-3">
+                    <label class="col-sm-4 col-form-label">Rate</label>
+                    <div class="col-sm-8">
+                        <div class="star-rating" onclick="setRating(event)">
+                            <input type="radio" id="star5" name="rate" value="5">
+                            <label for="star5" title="5 stars">&#9733;</label>
+                            <input type="radio" id="star4" name="rate" value="4">
+                            <label for="star4" title="4 stars">&#9733;</label>
+                            <input type="radio" id="star3" name="rate" value="3">
+                            <label for="star3" title="3 stars">&#9733;</label>
+                            <input type="radio" id="star2" name="rate" value="2">
+                            <label for="star2" title="2 stars">&#9733;</label>
+                            <input type="radio" id="star1" name="rate" value="1">
+                            <label for="star1" title="1 star">&#9733;</label>
+                        </div>
+                        <p id="rating-error" style="color: red; display: none;">Please select a rating.</p>
+                    </div>
+                </div>
+
+                <script>
+                  function setRating(event) {
+                      const ratingInputs = document.querySelectorAll('.star-rating input');
+                      let ratingSelected = false;
+                      ratingInputs.forEach(input => {
+                          if (input.checked) {
+                              ratingSelected = true;
+                          }
+                      });
+                      document.getElementById('rating-error').style.display = ratingSelected ? 'none' : 'block';
+                  }
+              </script>
+                  
+                    
+    
+                    <div class="row mb-3">
+                      <label class="col-sm-4 col-form-label">Description</label>
+                      <div class="col-sm-8">
+                            <textarea class="form-control" th:field="${customerAddFeedbackDto.description}" placeholder="Additional Note"></textarea>
+                            <p th:if="${#fields.hasErrors('description')}" th:errorclass="text-danger"
+                                th:errors="${customerAddFeedbackDto.description}"></p></div>       
+                    </div>
+    
+                    <div class="row">
+                      <div class="offset-sm-4 col-sm-4 d-grid">
+                          <button type="submit" class="btn btn-primary">Submit</button>
+                      </div>
+                      <div class="col-sm-4 d-grid">
+                          <a class="btn btn-outline-primary" href="/customerinterfacebookacab/index" role="button">Cancel</a>
+                      </div>
+                  </div>
+                    
+     
+                </form>
+            </div>
+    
+        </div>
+    
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+      <!-- contact section end -->
+      <!-- footer section start -->
+      <div class="footer_section layout_padding" style="padding: 50px 0; background-color: #222; color: #fff; text-align: center;">
+        <div class="container" style="max-width: 1200px; margin: auto;">
+           <div class="row" style="display: flex; justify-content: center;">
+              <div class="col-md-12" style="width: 100%;">
+                  
+              </div>
+           </div>
+           <div class="footer_section_2" style="margin-top: 30px;">
+              <div class="row" style="display: flex; justify-content: space-between; text-align: left;">
+                 <div class="col" style="width: 20%; padding: 10px;">
+                    <h4 class="footer_taital" style="font-size: 18px; font-weight: bold; color: #fff; margin-bottom: 10px;">Subscribe Now</h4>
+                    <p class="footer_text" style="font-size: 14px; color: #ccc;">There are many variations of passages of Lorem Ipsum available.</p>
+                    <div class="form-group" style="margin-top: 10px;">
+                       <textarea class="update_mail" placeholder="Enter Your Email" rows="2" id="comment" name="Enter Your Email" 
+                          style="width: 100%; padding: 8px; border: none; border-radius: 5px; font-size: 14px;"></textarea>
+                       <div class="subscribe_bt" style="margin-top: 10px;">
+                          <a href="#" style="background: #fe5b29; color: #fff; padding: 8px 15px; text-decoration: none; border-radius: 5px; display: inline-block; font-size: 14px;">Subscribe</a>
+                       </div>
+                    </div>
+                 </div>
+                 <div class="col" style="width: 20%; padding: 10px;">
+                    <h4 class="footer_taital" style="font-size: 18px; font-weight: bold; color: #fff; margin-bottom: 10px;">Information</h4>
+                    <p class="lorem_text" style="font-size: 14px; color: #ccc;">There are many variations of passages of Lorem Ipsum available, but the majority.</p>
+                 </div>
+                 <div class="col" style="width: 20%; padding: 10px;">
+                    <h4 class="footer_taital" style="font-size: 18px; font-weight: bold; color: #fff; margin-bottom: 10px;">Helpful Links</h4>
+                    <p class="lorem_text" style="font-size: 14px; color: #ccc;">There are many variations of passages of Lorem Ipsum available, but the majority.</p>
+                 </div>
+                 <div class="col" style="width: 20%; padding: 10px;">
+                    <h4 class="footer_taital" style="font-size: 18px; font-weight: bold; color: #fff; margin-bottom: 10px;">Investments</h4>
+                    <p class="lorem_text" style="font-size: 14px; color: #ccc;">There are many variations of passages of Lorem Ipsum available, but the majority.</p>
+                 </div>
+                 <div class="col" style="width: 20%; padding: 10px;">
+                    <h4 class="footer_taital" style="font-size: 18px; font-weight: bold; color: #fff; margin-bottom: 10px;">Contact Us</h4>
+                    <div class="location_text" style="margin-bottom: 8px;">
+                       <a href="#" style="text-decoration: none; color: #ccc; font-size: 14px;">
+                       <i class="fa fa-map-marker" aria-hidden="true"></i> <span style="padding-left: 10px;">Location</span>
+                       </a>
+                    </div>
+                    <div class="location_text" style="margin-bottom: 8px;">
+                       <a href="#" style="text-decoration: none; color: #ccc; font-size: 14px;">
+                       <i class="fa fa-phone" aria-hidden="true"></i> <span style="padding-left: 10px;">(+71) 8522369417</span>
+                       </a>
+                    </div>
+                    <div class="location_text" style="margin-bottom: 10px;">
+                       <a href="#" style="text-decoration: none; color: #ccc; font-size: 14px;">
+                       <i class="fa fa-envelope" aria-hidden="true"></i> <span style="padding-left: 10px;">megacitycab@gmail.com</span>
+                       </a>
+                    </div>
+                    <div class="social_icon" style="margin-top: 10px;">
+                       <ul style="list-style: none; display: flex; gap: 10px; padding: 0; margin: 0;">
+                          <li><a href="#" style="color: #ccc; font-size: 16px;"><i class="fa fa-facebook"></i></a></li>
+                          <li><a href="#" style="color: #ccc; font-size: 16px;"><i class="fa fa-twitter"></i></a></li>
+                          <li><a href="#" style="color: #ccc; font-size: 16px;"><i class="fa fa-linkedin"></i></a></li>
+                          <li><a href="#" style="color: #ccc; font-size: 16px;"><i class="fa fa-instagram"></i></a></li>
+                       </ul>
+                    </div>
+                 </div>
+              </div>
+           </div>
+        </div>
+     </div>
+     
+      <!-- footer section end -->
+      <!-- copyright section start -->
+      <div class="copyright_section" style="background-color: #111; padding: 15px 0; text-align: center; color: #fff;">
+        <div class="container" style="max-width: 1200px; margin: auto;">
+           <div class="row" style="display: flex; justify-content: center;">
+              <div class="col-sm-12" style="width: 100%;">
+                 <p class="copyright_text" style="font-size: 14px; color: #ccc; margin: 0;">
+                    2023 All Rights Reserved. Design by 
+                    <a href="https://html.design" style="color: #fe5b29; text-decoration: none;"> Mega City Cab</a> 
+
+                 </p>
+              </div>
+           </div>
+        </div>
+     </div>
+  
+  
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/jquery-migrate-3.0.1.min.js"></script>
+    <script src="/js/popper.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/jquery.easing.1.3.js"></script>
+    <script src="/js/jquery.waypoints.min.js"></script>
+    <script src="/js/jquery.stellar.min.js"></script>
+    <script src="/js/owl.carousel.min.js"></script>
+    <script src="/js/jquery.magnific-popup.min.js"></script>
+    <script src="/js/aos.js"></script>
+    <script src="/js/jquery.animateNumber.min.js"></script>
+    <script src="/js/bootstrap-datepicker.js"></script>
+    <script src="/js/jquery.timepicker.min.js"></script>
+    <script src="/js/scrollax.min.js"></script>
+    <script src="/https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+    <script src="/js/google-map.js"></script>
+    <script src="/js/main.js"></script>
+</body>
+</html>

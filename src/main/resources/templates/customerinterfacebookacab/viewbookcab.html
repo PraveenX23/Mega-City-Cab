@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Book Cab</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Roboto&family=Pacifico&display=swap" rel="stylesheet">
+
+    <style>
+        /* General Styling */
+        body {
+            background-color: #e9ecef;
+            font-family: 'Arial', sans-serif;
+        }
+
+        .bgg {
+    background-image: url('/images/view.png');
+    background-size: cover; /* Optional: scales the image to cover the entire background */
+    background-repeat: no-repeat; /* Optional: prevents the image from repeating */
+    background-position: center; /* Optional: centers the image */
+}
+
+
+        /* Container Styling */
+        .container {
+            padding: 30px;
+        }
+
+        /* Page Header Styling */
+        .page-inner {
+            background-color: #ffffff;
+            color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+        .page-inner h3 {
+            margin-bottom: 10px;
+            font-size: 26px;
+        }
+
+        .page-inner h6 {
+            font-size: 16px;
+            opacity: 0.9;
+        }
+
+        /* Table Styling */
+        .table {
+            background-color: #fff;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        /* Table Header Styling */
+        .table thead th {
+            background-color: #343a40;
+            color: #fff;
+            font-weight: bold;
+            padding: 12px;
+            font-size: 14px;
+        }
+
+        /* Table Body Styling */
+        .table tbody td {
+            padding: 12px;
+            border-bottom: 1px solid #dee2e6;
+            font-size: 14px;
+            color: #495057;
+        }
+
+        /* Hover Effect */
+        .table tbody tr:hover {
+            background-color: #f1f1f1;
+        }
+
+        /* Action Button Styles */
+        .btn-sm {
+            font-size: 14px;
+            padding: 6px 12px;
+            border-radius: 4px;
+            text-transform: uppercase;
+        }
+
+        .btn-primary {
+            background-color: #28a745;
+            border-color: #28a745;
+        }
+
+        .btn-primary:hover {
+            background-color: #218838;
+            border-color: #1e7e34;
+        }
+
+        .color {
+            color: black;
+        }
+
+        .btn-danger {
+            background-color: #dc3545;
+            border-color: #dc3545;
+        }
+
+        .btn-danger:hover {
+            background-color: #c82333;
+            border-color: #bd2130;
+        }
+
+        /* Disabled Button Styles */
+        .btn.disabled, .btn:disabled {
+            pointer-events: none;
+            opacity: 0.6;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .table thead th {
+                display: none;
+            }
+            .table tbody td {
+                display: block;
+                text-align: right;
+                position: relative;
+                padding-left: 50%;
+                border: none;
+                border-bottom: 1px solid #dee2e6;
+            }
+            .table tbody td::before {
+                content: attr(data-label);
+                position: absolute;
+                left: 0;
+                width: 45%;
+                padding-left: 10px;
+                font-weight: bold;
+                color: #333;
+                text-align: left;
+            }
+        }
+    </style>
+
+</head>
+<body>
+
+
+
+    
+
+
+
+
+    <div class="bgg">
+    <div class="container">
+        <div class="page-inner">
+            <div class="color d-flex flex-column flex-md-row justify-content-md-between align-items-md-center">
+                <div>
+                    <h3 class="fw-bold">Hello,</h3>
+                    <h6 class="op-7">You can either cancel or edit the table reservation. Thank you...</h6>
+                </div>
+            </div>
+
+            <h1 class="color text-center my-4">View Book Cab</h1>
+
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Id</th>
+                        <th>Name</th>
+                        <th>Category</th>
+                        <th>Place</th>
+                        <th>Phone</th>
+                        <th>Time</th>
+                        <th>Description</th>
+                        <th>Status</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr th:each="customerbookcab : ${customerbookcab}">
+                        <td th:text="${customerbookcab.id}" data-label="Id"></td>
+                        <td th:text="${customerbookcab.name}" data-label="Name"></td>
+                        <td th:text="${customerbookcab.type}" data-label="Category"></td>
+                        <td th:text="${customerbookcab.place}" data-label="Place"></td>
+                        <td th:text="${customerbookcab.phone}" data-label="Phone"></td>
+                        <td th:text="${customerbookcab.time}" data-label="Time"></td>
+                        <td th:text="${customerbookcab.description}" data-label="Description"></td>
+                        <td th:text="${customerbookcab.status}" data-label="Status"></td>
+                        <td style="white-space:nowrap;">
+                            <a class="btn btn-primary btn-sm"
+                               th:href="@{/customerinterfacebookacab/edit(id=${customerbookcab.id})}"
+                               th:classappend="${(customerbookcab.status == 'Waiting in the queue' || customerbookcab.status == null) ? '' : 'disabled'}"
+                               th:aria-disabled="${!(customerbookcab.status == 'Waiting in the queue' || customerbookcab.status == null)}">
+                               <i class="fas fa-edit"></i> Edit
+                            </a>
+                            <a class="btn btn-danger btn-sm"
+                               th:href="@{/customerinterfacebookacab/delete(id=${customerbookcab.id})}"
+                               onclick="return confirm('Are you sure?')"
+                               th:classappend="${(customerbookcab.status == 'Waiting in the queue' || customerbookcab.status == null) ? '' : 'disabled'}"
+                               th:aria-disabled="${!(customerbookcab.status == 'Waiting in the queue' || customerbookcab.status == null)}">
+                               <i class="fas fa-trash"></i> Delete
+                            </a>
+                        </td>
+                        
+                    </tr>
+                </tbody>
+            </table>
+        <a 
+              href="/customerpayment/customermakepayment" 
+              style="
+                display: inline-block;
+                padding: 10px 20px;
+                background-color: #ed0f0f;
+                color: white;
+                text-decoration: none;
+                border-radius: 5px;
+                font-weight: bold;
+                text-align: center;
+                transition: background-color 0.3s ease, transform 0.3s ease;
+              "
+              onmouseover="this.style.backgroundColor='#0056g3'; this.style.transform='scale(1.05)';"
+              onmouseout="this.style.backgroundColor='#00jbff'; this.style.transform='scale(1)';"
+            >
+              Make Payment
+      </a>
+
+
+      <a 
+      href="/customerpayment" 
+      style="
+        display: inline-block;
+        padding: 10px 20px;
+        background-color: #ed0f0f;
+        color: white;
+        text-decoration: none;
+        border-radius: 5px;
+        font-weight: bold;
+        text-align: center;
+        transition: background-color 0.3s ease, transform 0.3s ease;
+      "
+      onmouseover="this.style.backgroundColor='#0056g3'; this.style.transform='scale(1.05)';"
+      onmouseout="this.style.backgroundColor='#00jbff'; this.style.transform='scale(1)';"
+    >
+      View Payment
+</a>
+
+
+
+        </div>
+    </div>
+    </div>
+
+    
+      <!-- Optional Bootstrap JS (if needed) -->
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+      <!-- contact section end -->
+      <!-- footer section start -->
+      <div class="footer_section layout_padding" style="padding: 50px 0; background-color: #222; color: #fff; text-align: center;">
+        <div class="container" style="max-width: 1200px; margin: auto;">
+           <div class="row" style="display: flex; justify-content: center;">
+              <div class="col-md-12" style="width: 100%;">
+                  
+              </div>
+           </div>
+           <div class="footer_section_2" style="margin-top: 30px;">
+              <div class="row" style="display: flex; justify-content: space-between; text-align: left;">
+                 <div class="col" style="width: 20%; padding: 10px;">
+                    <h4 class="footer_taital" style="font-size: 18px; font-weight: bold; color: #fff; margin-bottom: 10px;">Subscribe Now</h4>
+                    <p class="footer_text" style="font-size: 14px; color: #ccc;">There are many variations of passages of Lorem Ipsum available.</p>
+                    <div class="form-group" style="margin-top: 10px;">
+                       <textarea class="update_mail" placeholder="Enter Your Email" rows="2" id="comment" name="Enter Your Email" 
+                          style="width: 100%; padding: 8px; border: none; border-radius: 5px; font-size: 14px;"></textarea>
+                       <div class="subscribe_bt" style="margin-top: 10px;">
+                          <a href="#" style="background: #fe5b29; color: #fff; padding: 8px 15px; text-decoration: none; border-radius: 5px; display: inline-block; font-size: 14px;">Subscribe</a>
+                       </div>
+                    </div>
+                 </div>
+                 <div class="col" style="width: 20%; padding: 10px;">
+                    <h4 class="footer_taital" style="font-size: 18px; font-weight: bold; color: #fff; margin-bottom: 10px;">Information</h4>
+                    <p class="lorem_text" style="font-size: 14px; color: #ccc;">There are many variations of passages of Lorem Ipsum available, but the majority.</p>
+                 </div>
+                 <div class="col" style="width: 20%; padding: 10px;">
+                    <h4 class="footer_taital" style="font-size: 18px; font-weight: bold; color: #fff; margin-bottom: 10px;">Helpful Links</h4>
+                    <p class="lorem_text" style="font-size: 14px; color: #ccc;">There are many variations of passages of Lorem Ipsum available, but the majority.</p>
+                 </div>
+                 <div class="col" style="width: 20%; padding: 10px;">
+                    <h4 class="footer_taital" style="font-size: 18px; font-weight: bold; color: #fff; margin-bottom: 10px;">Investments</h4>
+                    <p class="lorem_text" style="font-size: 14px; color: #ccc;">There are many variations of passages of Lorem Ipsum available, but the majority.</p>
+                 </div>
+                 <div class="col" style="width: 20%; padding: 10px;">
+                    <h4 class="footer_taital" style="font-size: 18px; font-weight: bold; color: #fff; margin-bottom: 10px;">Contact Us</h4>
+                    <div class="location_text" style="margin-bottom: 8px;">
+                       <a href="#" style="text-decoration: none; color: #ccc; font-size: 14px;">
+                       <i class="fa fa-map-marker" aria-hidden="true"></i> <span style="padding-left: 10px;">Location</span>
+                       </a>
+                    </div>
+                    <div class="location_text" style="margin-bottom: 8px;">
+                       <a href="#" style="text-decoration: none; color: #ccc; font-size: 14px;">
+                       <i class="fa fa-phone" aria-hidden="true"></i> <span style="padding-left: 10px;">(+71) 8522369417</span>
+                       </a>
+                    </div>
+                    <div class="location_text" style="margin-bottom: 10px;">
+                       <a href="#" style="text-decoration: none; color: #ccc; font-size: 14px;">
+                       <i class="fa fa-envelope" aria-hidden="true"></i> <span style="padding-left: 10px;">megacitycab@gmail.com</span>
+                       </a>
+                    </div>
+                    <div class="social_icon" style="margin-top: 10px;">
+                       <ul style="list-style: none; display: flex; gap: 10px; padding: 0; margin: 0;">
+                          <li><a href="#" style="color: #ccc; font-size: 16px;"><i class="fa fa-facebook"></i></a></li>
+                          <li><a href="#" style="color: #ccc; font-size: 16px;"><i class="fa fa-twitter"></i></a></li>
+                          <li><a href="#" style="color: #ccc; font-size: 16px;"><i class="fa fa-linkedin"></i></a></li>
+                          <li><a href="#" style="color: #ccc; font-size: 16px;"><i class="fa fa-instagram"></i></a></li>
+                       </ul>
+                    </div>
+                 </div>
+              </div>
+           </div>
+        </div>
+     </div>
+     
+      <!-- footer section end -->
+      <!-- copyright section start -->
+      <div class="copyright_section" style="background-color: #111; padding: 15px 0; text-align: center; color: #fff;">
+        <div class="container" style="max-width: 1200px; margin: auto;">
+           <div class="row" style="display: flex; justify-content: center;">
+              <div class="col-sm-12" style="width: 100%;">
+                 <p class="copyright_text" style="font-size: 14px; color: #ccc; margin: 0;">
+                    2023 All Rights Reserved. Design by 
+                    <a href="https://html.design" style="color: #fe5b29; text-decoration: none;"> Mega City Cab</a> 
+
+                 </p>
+              </div>
+           </div>
+        </div>
+     </div>
+
+</body>
+</html>
